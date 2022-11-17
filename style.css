@@ -16,8 +16,15 @@
 
 
 body {
-    background-color: black;
+    background-color: var(--grayblue);
     /* background-color: hsl(212, 45%, 89%); */
+}
+
+.main-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -26,6 +33,7 @@ body {
     height: 320px;
     width: 200px;
     border-radius: 10px;
+
 }
 .qr-container {
     width: 100%;
@@ -46,6 +54,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    max-height: 100%;
 }
 
 .text-top, .text-top-two {
@@ -60,3 +69,25 @@ body {
     font-size: 10px;
     font-weight: 300;
 }
+
+@media only screen and (max-width: 400px) {
+    body {
+      background-color: black;
+    }
+    .outer-container {
+       
+        min-height: 60%;
+        min-width: 80%; 
+        border-radius: 15px;
+    }
+    .qr-container {
+        padding: 20px;
+    }
+    .text-top, .text-top-two {
+        font-size: 2.8vh;
+    }
+    .text-bottom {
+        font-size: 1.9vh;
+        
+    }
+  }
